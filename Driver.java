@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdIn;
 
 /**
  * This class is designed to test each method in the Transit file interactively

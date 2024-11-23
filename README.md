@@ -1,13 +1,28 @@
 # Transit
 
-Programming Assignment 2 for Data Structures course
+Programming Assignment 2 for the Data Structures course  
+[Assignment Link](https://ds.cs.rutgers.edu/assignment-transportation/)
 
-https://ds.cs.rutgers.edu/assignment-transportation/
+## Problem Description
 
-## Problem
+You’ve just moved into a new city and need to plan your daily commute across three modes of transportation: subway, bus, and walking. The city can be visualized as a number line, with your starting point at position 0. The goal is to determine the most efficient way to reach a destination by using any combination of subway, bus, or walking.
 
-You’ve just moved into a new city, and you’re planning your daily commute. You have 3 modes of public transportation available to you: the subway, the bus, and of course you can just walk. You can imagine locations in the city as a number line which increments from your starting location of 0 (zero). You can only move forward along this number line in your journey. The train is much faster than the bus, and the bus is much faster than walking. Unfortunately, the train can only stop at points where a train station exists, and the bus can only stop at points where a bus stop exists. You may assume that a bus stop exists at every train station, and that you may begin walking from any bus stop. You may walk forward and end your walking journey at any point.
+Key considerations:
+- The subway is the fastest mode of transportation but can only stop at subway stations.
+- The bus is slower than the subway but faster than walking and can stop at bus stops.
+- Walking can be done at any bus stop and allows you to walk forward to any point on the number line.
 
-## Solution
+## Approach & Solution
 
-Found the most optimal path to reach the destination using a 3-layered linked-list implementation.
+The problem is solved by modeling the transportation options using a **3-layered linked-list** data structure. Each layer represents a mode of transportation (subway, bus, and walking), and the linked list is used to find the optimal path to the destination by traversing through the available stops.
+
+- The 3-layered linked list organizes transportation modes at each stop along the number line.
+- The optimal path is determined by choosing the fastest transportation option at each point on the journey.
+
+This approach allows for an efficient computation of the fastest path to the destination, considering the constraints of available transportation modes.
+
+## Key Features
+
+- **3-layered linked-list** for organizing transportation options at each stop.
+- Efficient pathfinding to determine the quickest route from the start to the destination.
+- Models a city with subway stations, bus stops, and walkable paths.
